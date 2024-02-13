@@ -19,14 +19,14 @@ opt <- docopt(doc)
 main <- function(var) {
 
   # read in our data
-  data <- suppressMessages(read_csv("titanic.csv"))
+  data <- suppressMessages(read_csv("data/titanic.csv"))
 
   out <- data |>
     pull(!!var) |>
     mean(na.rm = TRUE)
 
   print(out)
-  saveRDS(out, "mean.RDS")
+  saveRDS(out, "output/mean.RDS")
 }
 
 main(opt$var)

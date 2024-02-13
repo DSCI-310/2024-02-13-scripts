@@ -28,7 +28,7 @@ main <- function(file_path, var) {
     mean(na.rm = TRUE)
 
   print(out)
-  saveRDS(out, "mean.RDS")
+  saveRDS(out, "output/mean.RDS")
 }
 
 main(opt$file_path, opt$var)
